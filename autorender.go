@@ -5,7 +5,6 @@ import (
 	"os"
 	"syscall"
 	"log"
-	"strconv"
 )
 
 type AutoRender struct {
