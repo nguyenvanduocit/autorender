@@ -43,7 +43,7 @@ func NewProject(templateFilePath string, composition string, assets []Asset, out
 		IncrementFrame: incrementFrame,
 	}
 	project.ProjectName = path.Base(project.TemplateFilePath)
-	project.ProjectPath = path.Join(currentDir, fmt.Sprintf("project/%s", id))
+	project.ProjectPath = path.Join(currentDir, fmt.Sprintf("projects/%s", id))
 	project.AssetPath = path.Join(project.ProjectPath, "assets")
 	return &project
 }
