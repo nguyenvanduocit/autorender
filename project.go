@@ -71,6 +71,7 @@ func (project *Project)DowloadAssets(){
 	for _, asset := range project.Assets{
 		asset.DownloadTo(project.AssetPath)
 	}
+	log.Println("All image downloadee")
 }
 
 /**
@@ -91,3 +92,6 @@ func (project *Project)ReplaceAssets(){
 	}
 }
 
+func (project *Project)ClearTempDir(){
+	//os.RemoveAll(project.ProjectPath)
+}

@@ -27,6 +27,7 @@ func (render *AutoRender)Render(project *Project){
 
 	render.runAerender(project)
 
+	project.ClearTempDir()
 }
 
 func (render *AutoRender)runAerender(project *Project){
@@ -34,8 +35,8 @@ func (render *AutoRender)runAerender(project *Project){
 		"-comp", project.Composition,
 		"-project", path.Join(project.ProjectPath, project.ProjectName),
 		"-output", path.Join(project.ProjectPath, "result"),
-		//"-OMtemplate", project.OutputModule,
-		"-i", strconv.Itoa(project.IncrementFrame),
+		"-OMtemplate", project.OutputModule,
+		//"-i", strconv.Itoa(project.IncrementFrame),
 	}
 	env := os.Environ()
 	err := syscall.Exec(render.AerenderPath, args, env)
