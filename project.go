@@ -78,6 +78,7 @@ func (project *Project)DowloadAssets(){
  * Currently, It can only replace filepath, Which can be different from what displaced in AE UI. Because in AE UI, you can rename asset, but the real filename not change.
  */
 func (project *Project)ReplaceAssets(){
+	fmt.Println("Replace Assets")
 	contentBytes, err := ioutil.ReadFile(project.TemplateFilePath)
 	if err != nil {
 		log.Fatal(err)
