@@ -34,7 +34,7 @@ func (render *AutoRender)runAerender(project *Project){
 		"-comp", project.Composition,
 		"-project", path.Join(project.ProjectPath, project.ProjectName),
 		"-output", path.Join(project.ProjectPath, "result"),
-		"-OMtemplate", project.OutputModule,
+		//"-OMtemplate", project.OutputModule,
 		//"-i", strconv.Itoa(project.IncrementFrame),
 	}
 	env := os.Environ()
